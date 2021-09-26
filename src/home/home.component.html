@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="age">Age</label>
         <input
           type="number"
@@ -27,11 +27,12 @@
           required
           [(ngModel)]="model.age"
           name="age"
+          #name="ngModel"
         />
         <div [hidden]="age.valid || age.pristine" class="alert alert-danger">
           Age is required
         </div>
-      </div>
+      </div> -->
 
       <div class="form-group">
         <label for="address">Address type</label>
