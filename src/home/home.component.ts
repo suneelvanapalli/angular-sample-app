@@ -6,22 +6,19 @@ import { Hero } from './hero';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
-ngOnInit(): void {
-throw new Error('Method not implemented.');
-}
+export class HomeComponent {
 
-  powers = ['Really Smart', 'Super Flexible',
-  'Super Hot', 'Weather Changer'];
+    powers = ['Really Smart', 'Super Flexible',
+    'Super Hot', 'Weather Changer'];
 
-model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
 
-submitted = false;
+  submitted = false;
 
-onSubmit() { this.submitted = true; }
+  onSubmit() { this.submitted = true; }
 
-newHero() {
-this.model = new Hero(42, '', '');
-}
+  newHero() {
+  this.model = new Hero(42, '', '');
+  }
 
 }
