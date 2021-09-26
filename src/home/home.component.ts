@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
+import { UserForm } from './user';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +8,16 @@ import { Hero } from './hero';
 })
 export class HomeComponent {
 
-    powers = ['Really Smart', 'Super Flexible',
-    'Super Hot', 'Weather Changer'];
+  addressTypeList = ['House', 'Unit', 'Apartment'];
 
-  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
+  model = new UserForm("John", 52, "12 Lonsdale street");
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
-  newHero() {
-  this.model = new Hero(42, '', '');
+  newUser() {
+    this.model = new UserForm("John", 52, "12 Lonsdale street");
   }
 
 }
